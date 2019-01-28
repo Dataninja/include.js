@@ -333,7 +333,7 @@
      * @param {Array}    deps     dependencies of the module
      * @param {Function} module   module definition
      */
-    environment['include'] = environment['require'] = environment['define'] = function (name, deps, module) {
+    environment['load'] = function (name, deps, module) {
         return new Include(name, deps, module);
     };
 
